@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "title": "5 Myths about Protein You Need to Stop Believing",
+    "date": "2026-10-14",
+    "author": "Marcus Kane",
+    "image": "assets/images/gallery/workout_model.png"
+  },
+  {
+    "id": 2,
+    "title": "The Ultimate 6-Day Push Pull Legs Routine",
+    "date": "2026-10-10",
+    "author": "David Sterling",
+    "image": "assets/images/gallery/gym_1.png"
+  },
+  {
+    "id": 3,
+    "title": "How to Break Through a Deadlift Plateau",
+    "date": "2026-10-05",
+    "author": "Marcus Kane",
+    "image": "assets/images/gallery/gym_3.png"
+  },
+  {
+    "id": 4,
+    "title": "The Science of Hypertrophy: Volume vs Intensity",
+    "date": "2026-09-28",
+    "author": "Trainer Team",
+    "image": "assets/images/gallery/workout_model.png"
+  },
+  {
+    "id": 5,
+    "title": "Top 10 High-Protein Vegan Meals for Muscle Gain",
+    "date": "2026-09-20",
+    "author": "Nutrition expert",
+    "image": "assets/images/trainers/trainer_coach.png"
+  }
+]

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | IronEdge Gym</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="custom-cursor"></div>
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="page-hero-bg parallax-img" style="background-image: url('assets/images/gallery/gym_1.png');"></div>
+            <div class="page-hero-overlay"></div>
+            <div class="container page-hero-content">
+                <h1 class="reveal-text"><div class="word">Our</div> <div class="word">Gym</div> <div class="word">In</div> <div class="word text-accent">Action</div></h1>
+                <p>Authentic, sweaty, and intense. See the real work happening.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-item large hover-lift">
+                        <img src="assets/images/gallery/gym_1.png" alt="Dumbbell Rack">
+                        <div class="gallery-overlay"><h3>Premium Iron</h3><p>Elite Dumbbell Racks</p></div>
+                    </div>
+                    <div class="gallery-item hover-lift">
+                        <img src="assets/images/gallery/gym_2.png" alt="Dark Gym Floor">
+                        <div class="gallery-overlay"><h3>Cinematic Vibes</h3></div>
+                    </div>
+                    <div class="gallery-item hover-lift">
+                        <img src="assets/images/gallery/gym_3.png" alt="Chalk Barbell">
+                        <div class="gallery-overlay"><h3>Raw Power</h3><p>Deadlift Platforms</p></div>
+                    </div>
+                    <div class="gallery-item hover-lift">
+                        <img src="assets/images/gallery/gym_4.png" alt="Boxing Ring">
+                        <div class="gallery-overlay"><h3>Combat Zone</h3><p>Boxing Ring</p></div>
+                    </div>
+                    <div class="gallery-item hover-lift">
+                        <img src="assets/images/gallery/gym_5.png" alt="Crossfit">
+                        <div class="gallery-overlay"><h3>Crossfit Area</h3></div>
+                    </div>
+                    <div class="gallery-item large hover-lift">
+                        <img src="assets/images/gallery/gym_6.png" alt="Muscular Arm">
+                        <div class="gallery-overlay"><h3>True Dedication</h3><p>Kettlebell Training</p></div>
+                    </div>
+                    <div class="gallery-item hover-lift">
+                        <img src="assets/images/gallery/workout_model.png" alt="Workout Model">
+                        <div class="gallery-overlay"><h3>Peak Focus</h3></div>
+                    </div>
+                    <div class="gallery-item hover-lift">
+                        <img src="assets/images/transformations/transformation_model.png" alt="Transformation">
+                        <div class="gallery-overlay"><h3>Elite Process</h3></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <br>
+        <section class="section transformation-section glass" style="border-top: 1px solid rgba(255,255,255,0.05);">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Real <span class="text-accent">Results</span></h2>
+                    <p>Swipe to see what happens when dedication meets elite coaching.</p>
+                </div>
+                
+                <div class="slider-container">
+                    <div class="before-after-slider">
+                        <img src="assets/images/transformations/transformation_model.png" alt="After" class="image-after">
+                        <div class="image-before-wrapper">
+                            <img src="assets/images/hero/hero_bg.png" alt="Before" class="image-before">
+                        </div>
+                        <div class="slider-handle">
+                            <div class="slider-line"></div>
+                            <div class="slider-button">↔</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <div id="modal-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

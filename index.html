@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronEdge Gym | Premium Fitness Jaipur</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Swiper CSS for Sliders -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="custom-cursor"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Preloader -->
+    <div class="loader-wrapper" id="preloader">
+        <div class="loader-text">IRONEDGE</div>
+        <div class="loader-bar-container">
+            <div class="loader-bar" id="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Injected Components -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg ken-burns">
+                <img src="assets/images/hero/hero_bg.png" alt="IronEdge Gym Background">
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="container hero-content">
+                <h1 class="reveal-text"><div class="word">Forged</div> <div class="word">In</div> <div class="word text-accent">Iron</div></h1>
+                <p class="hero-subtext">Jaipur's Elite Fitness Destination. Redefine your limits.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary interactive-element" onclick="window.openModal()">Start Free Trial</button>
+                    <a href="#stats" class="btn btn-outline interactive-element">Explore</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="section stats-section glass" id="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h2 class="counter" data-target="2500">0</h2>
+                        <p>Active Members</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2 class="counter" data-target="25">0</h2>
+                        <p>Elite Trainers</p>
+                    </div>
+                    <div class="stat-card">
+                        <h2 class="counter" data-target="1500">0</h2>
+                        <p>Transformations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Goal Selector Section -->
+        <section class="section goals-section" id="programs">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Choose Your <span class="text-accent">Path</span></h2>
+                    <p>Customized programs tailored to your ultimate fitness goals.</p>
+                </div>
+                
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="weight-loss">Weight Loss</button>
+                    <button class="tab-btn" data-tab="muscle-gain">Muscle Gain</button>
+                </div>
+
+                <div class="tab-content active" id="weight-loss">
+                    <div class="goal-grid">
+                        <div class="goal-text">
+                            <h3>Shred & <span class="text-accent">Burn</span></h3>
+                            <p>High-intensity interval training, functional cardio, and personalized nutrition plans designed to lower body fat while maintaining stamina.</p>
+                            <ul class="goal-features">
+                                <li>HIIT Classes</li>
+                                <li>Cardio Combat</li>
+                                <li>Nutrition Coaching</li>
+                            </ul>
+                        </div>
+                        <div class="goal-image parallax-wrap">
+                            <img src="assets/images/transformations/after_1.png" alt="Weight Loss Training" class="parallax-img">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="muscle-gain">
+                    <div class="goal-grid">
+                        <div class="goal-text">
+                            <h3>Hypertrophy & <span class="text-accent">Strength</span></h3>
+                            <p>Heavy lifting schedules, powerlifting coaching, and diet regimens focused on lean muscle mass accumulation.</p>
+                            <ul class="goal-features">
+                                <li>Powerlifting</li>
+                                <li>Bodybuilding</li>
+                                <li>Recovery Protocols</li>
+                            </ul>
+                        </div>
+                        <div class="goal-image parallax-wrap">
+                            <img src="assets/images/trainers/trainer_1.png" alt="Muscle Gain Training" class="parallax-img">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Transformation Before/After -->
+        <section class="section transformation-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Real <span class="text-accent">Results</span></h2>
+                    <p>Swipe to see what happens when dedication meets elite coaching.</p>
+                </div>
+                
+                <div class="slider-container">
+                    <div class="before-after-slider">
+                        <!-- After Image (Background) -->
+                        <img src="assets/images/transformations/after_1.png" alt="After" class="image-after">
+                        <!-- Before Image (Overlay clipped) -->
+                        <div class="image-before-wrapper">
+                            <img src="assets/images/hero/hero_bg.png" alt="Before" class="image-before"> <!-- Using hero_bg as placeholder for 'before' -->
+                        </div>
+                        <!-- Custom Handle -->
+                        <div class="slider-handle">
+                            <div class="slider-line"></div>
+                            <div class="slider-button">↔</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section glass" style="border-top: 1px solid rgba(255,255,255,0.05); padding-bottom: 5rem;">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Success <span class="text-accent">Stories</span></h2>
+                    <p>Don't just take our word for it. Hear what the IronEdge family has to say.</p>
+                </div>
+                
+                <div class="cards-grid" style="margin-top: 3rem;">
+                    <!-- Testimonial 1 -->
+                    <div class="card glass" style="padding: 2rem; border-color: rgba(229, 9, 20, 0.3);">
+                        <div style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;">"</div>
+                        <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 2rem;">"Joining IronEdge was the best decision of my life. I lost 15kg in 4 months and I've never felt stronger. The trainers actually care about your form and progress."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--bg-color-lighter); overflow: hidden;">
+                                <img src="assets/images/transformations/after_1.png" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h4 style="margin:0; font-family: var(--font-body);">Arjun Singh</h4>
+                                <span style="font-size: 0.8rem; color: var(--accent-color);">Weight Loss Program</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="card glass" style="padding: 2rem; border-color: rgba(229, 9, 20, 0.3);">
+                        <div style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;">"</div>
+                        <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 2rem;">"The atmosphere here is pure motivation. Every piece of equipment is top tier and the community pushes you to lift heavier every single day. Incredible vibe."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--bg-color-lighter); overflow: hidden;">
+                                <img src="assets/images/trainers/trainer_3.png" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h4 style="margin:0; font-family: var(--font-body);">Rahul V.</h4>
+                                <span style="font-size: 0.8rem; color: var(--accent-color);">Powerlifting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="card glass" style="padding: 2rem; border-color: rgba(229, 9, 20, 0.3);">
+                        <div style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;">"</div>
+                        <p style="font-style: italic; color: var(--text-secondary); margin-bottom: 2rem;">"My personal coach David completely fixed my terrible deadlift form in two sessions. Worth every single penny. It's truly a premium experience in Jaipur."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--bg-color-lighter); overflow: hidden;">
+                                <img src="assets/images/transformations/transformation_model.png" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div>
+                                <h4 style="margin:0; font-family: var(--font-body);">Sneha Sharma</h4>
+                                <span style="font-size: 0.8rem; color: var(--accent-color);">Personal Training</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section cta-section" id="join">
+            <div class="cta-overlay glass">
+                <h2>Ready To <span class="text-accent">Commit?</span></h2>
+                <p>Don't wait for tomorrow. Your transformation begins the moment you step in.</p>
+                <!-- Interactive Glow Button -->
+                <button class="btn btn-primary" onclick="window.openModal()">Claim Your Free Pass</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Injected Components -->
+    <div id="footer-placeholder"></div>
+    <div id="modal-placeholder"></div>
+
+    <!-- Scripts -->
+    <!-- GSAP Core & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

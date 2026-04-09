@@ -1,0 +1,148 @@
+<div class="modal" id="lead-modal">
+  <div class="modal-overlay"></div>
+  <div class="modal-content glass">
+    <button class="modal-close" id="modal-close">&times;</button>
+    <div class="modal-header">
+      <h2>Get Your <span class="text-accent">Free Trial</span></h2>
+      <p>Start your transformation today at IronEdge Gym Jaipur.</p>
+    </div>
+    <form id="lead-form" class="lead-form">
+      <div class="input-group">
+        <input type="text" id="name" required placeholder=" ">
+        <label for="name">Full Name</label>
+      </div>
+      <div class="input-group">
+        <input type="tel" id="phone" required placeholder=" ">
+        <label for="phone">Phone Number</label>
+      </div>
+      <div class="input-group">
+        <select id="goal" required>
+          <option value="" disabled selected>Select Fitness Goal</option>
+          <option value="weight-loss">Weight Loss</option>
+          <option value="muscle-gain">Muscle Gain</option>
+          <option value="endurance">Endurance</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Claim Free Trial</button>
+    </form>
+  </div>
+</div>
+
+<style>
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.1) inset;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0) scale(1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: var(--accent-color);
+}
+
+.modal-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.modal-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.lead-form .input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.lead-form input, .lead-form select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  color: white;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.lead-form input:focus, .lead-form select:focus {
+  border-color: var(--accent-color);
+}
+
+/* Floating label magic */
+.lead-form label {
+  position: absolute;
+  left: 1rem;
+  top: 1.1rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.lead-form input:focus ~ label,
+.lead-form input:not(:placeholder-shown) ~ label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: 0.8rem;
+  background: var(--bg-color-light); /* Hide the border behind text */
+  padding: 0 0.4rem;
+  color: var(--accent-color);
+}
+
+.w-100 {
+  width: 100%;
+}
+</style>

@@ -1,0 +1,31 @@
+@media (max-width: 1024px) {
+  h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+  h2 { font-size: clamp(2rem, 5vw, 3rem); }
+  
+  .section {
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide on mobile initially, JS will toggle */
+  }
+
+  .nav-mobile-btn {
+    display: block;
+  }
+
+  h1 { font-size: 2.5rem; }
+  h2 { font-size: 2rem; }
+
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    width: 100%; /* Thumb-friendly mobile buttons */
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}

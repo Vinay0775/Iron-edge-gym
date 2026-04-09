@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Plans | IronEdge Gym</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="custom-cursor"></div>
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section class="page-hero">
+            <div class="page-hero-bg parallax-img" style="background-image: url('assets/images/hero/hero_bg.png'); filter: brightness(0.6);"></div>
+            <div class="page-hero-overlay"></div>
+            <div class="container page-hero-content">
+                <h1 class="reveal-text"><div class="word">Choose</div> <div class="word">Your</div> <div class="word text-accent">Plan</div></h1>
+                <p>Invest in your body. Flexible options for serious results.</p>
+            </div>
+        </section>
+
+        <!-- Plans -->
+        <section class="section">
+            <div class="container">
+                <div class="pricing-grid">
+                    <!-- Basic Plan -->
+                    <div class="plan-card">
+                        <h3>Monthly <span class="text-accent">Plan</span></h3>
+                        <div class="plan-price">₹2,499<span>/mo</span></div>
+                        <ul class="plan-features">
+                            <li>Full Gym Access</li>
+                            <li>Basic Diet Guidance</li>
+                            <li>Locker Room Access</li>
+                        </ul>
+                        <button class="btn btn-outline" style="width: 100%;" onclick="window.openModal()">Select Plan</button>
+                    </div>
+
+                    <!-- BEST VALUE Plan -->
+                    <div class="plan-card popular">
+                        <div class="plan-badge">BEST VALUE</div>
+                        <h3>Yearly <span class="text-accent">Elite</span></h3>
+                        <div class="plan-price">₹14,999<span>/yr</span></div>
+                        <ul class="plan-features">
+                            <li>24/7 Gym Access</li>
+                            <li>Personal Trainer Support (2x/mo)</li>
+                            <li>Advanced Custom Diet Plan</li>
+                            <li>Spa & Sauna Access</li>
+                            <li>Free Merchandise</li>
+                        </ul>
+                        <button class="btn btn-primary interactive-element" style="width: 100%;" onclick="window.openModal()">Secure Offer</button>
+                    </div>
+
+                    <!-- Quarterly Plan -->
+                    <div class="plan-card">
+                        <h3>Quarterly <span class="text-accent">Plan</span></h3>
+                        <div class="plan-price">₹6,499<span>/3mo</span></div>
+                        <ul class="plan-features">
+                            <li>Full Gym Access</li>
+                            <li>General Trainer Support</li>
+                            <li>Diet Guidance</li>
+                            <li>Locker Room Access</li>
+                        </ul>
+                        <button class="btn btn-outline" style="width: 100%;" onclick="window.openModal()">Select Plan</button>
+                    </div>
+                </div>
+                
+                <!-- Countdown Section -->
+                <div class="section-header text-center" style="margin-top: 5rem;">
+                    <h2 style="font-size: 2.5rem;"><span class="text-accent">Limited Time</span> Flash Discount!</h2>
+                    <p style="color: var(--text-secondary);">Sign up in the next 48 hours for an exclusive 20% off on all Yearly Plans.</p>
+                    <div class="countdown-box" id="offers-countdown">
+                        <div class="cd-item"><span class="cd-num" id="cd-hours">48</span><span class="cd-label">Hours</span></div>
+                        <div class="cd-item"><span class="cd-num" id="cd-minutes">00</span><span class="cd-label">Minutes</span></div>
+                        <div class="cd-item"><span class="cd-num" id="cd-seconds">00</span><span class="cd-label">Seconds</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section glass">
+            <div class="container" style="max-width: 800px;">
+                <div class="section-header text-center">
+                    <h2>Frequently Asked <span class="text-accent">Questions</span></h2>
+                </div>
+                <div style="display:flex; flex-direction: column; gap: 1rem;">
+                    <div class="glass" style="padding: 1.5rem; border-radius: var(--radius-md);">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Do I need to pay a joining fee?</h3>
+                        <p style="color: var(--text-secondary);">No, our memberships are strictly subscription based without hidden setup fees.</p>
+                    </div>
+                    <div class="glass" style="padding: 1.5rem; border-radius: var(--radius-md);">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Can I pause my membership?</h3>
+                        <p style="color: var(--text-secondary);">Yearly and Quarterly members can pause their memberships for up to 30 days once a year for medical or travel reasons.</p>
+                    </div>
+                    <div class="glass" style="padding: 1.5rem; border-radius: var(--radius-md);">
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">Do you have female trainers?</h3>
+                        <p style="color: var(--text-secondary);">Yes, we have certified female coaches available across all general and personal training hours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <div id="modal-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Temporary Inline Countdown Logic for Plans Page
+        let timeInSeconds = 48 * 3600; 
+        const hEl = document.getElementById('cd-hours');
+        const mEl = document.getElementById('cd-minutes');
+        const sEl = document.getElementById('cd-seconds');
+        
+        if (hEl && mEl && sEl) {
+            setInterval(() => {
+                if(timeInSeconds <= 0) return;
+                timeInSeconds--;
+                const h = Math.floor(timeInSeconds / 3600);
+                const m = Math.floor((timeInSeconds % 3600) / 60);
+                const s = timeInSeconds % 60;
+                
+                hEl.innerText = h.toString().padStart(2, '0');
+                mEl.innerText = m.toString().padStart(2, '0');
+                sEl.innerText = s.toString().padStart(2, '0');
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

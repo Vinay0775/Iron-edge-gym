@@ -1,0 +1,119 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2 class="logo">IRON<span class="text-accent">EDGE</span></h2>
+        <p class="footer-desc">The ultimate fitness destination in Jaipur. Unleash your potential with state-of-the-art equipment and elite trainers.</p>
+      </div>
+      
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="plans.html">Memberships</a></li>
+          <li><a href="trainers.html">Our Trainers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <ul>
+          <li>123 Fitness Street, Jaipur, Rajasthan</li>
+          <li>+91 98765 43210</li>
+          <li>info@ironedge.com</li>
+        </ul>
+      </div>
+      
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" class="icon">IG</a>
+          <a href="#" class="icon">FB</a>
+          <a href="#" class="icon">YT</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 IronEdge Gym. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.footer {
+  background-color: var(--bg-color-light);
+  padding: var(--spacing-xxl) 0 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.footer-desc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  max-width: 300px;
+}
+
+.footer ul li {
+  margin-bottom: 1rem;
+}
+
+.footer ul li a, .footer ul li {
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+  color: var(--accent-color);
+  padding-left: 5px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons .icon {
+  width: 40px;
+  height: 40px;
+  background: var(--bg-color-lighter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.social-icons .icon:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+</style>

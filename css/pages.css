@@ -1,0 +1,125 @@
+/* --- PAGE SPECIFIC STYLES --- */
+
+.page-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: flex-end; /* forces content safely to the bottom */
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 15rem; /* absolutely forces text down */
+  padding-bottom: 8rem; /* space at bottom */
+}
+
+.page-hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to bottom, rgba(5,5,5,0.6) 0%, rgba(5,5,5,0.9) 100%);
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.page-hero-content h1 { margin-bottom: 0.5rem; }
+.page-hero-content p { font-size: 1.25rem; color: var(--text-secondary); }
+
+/* About Page */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-features { margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.about-features li { display: flex; align-items: center; gap: 10px; font-weight: 500; }
+.about-features li::before { content: '✔'; color: var(--accent-color); }
+
+/* Cards Grid (Used for Programs, Trainers, Blogs) */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--bg-color-lighter);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card:hover {  transform: translateY(-10px); box-shadow: var(--shadow-card); border-color: rgba(229, 9, 20, 0.3);}
+.card-img-wrapper { height: 250px; overflow: hidden; position: relative;}
+.card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.card:hover .card-img { transform: scale(1.1); }
+.card-body { padding: 2rem; }
+.card-title { margin-bottom: 1rem; font-size: 1.5rem; }
+.card-text { color: var(--text-secondary); margin-bottom: 1.5rem; }
+
+/* Pricing Plans */
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+.plan-card {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: rgba(26, 26, 26, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+}
+.plan-card.popular {
+  border-color: var(--accent-color);
+  background: linear-gradient(180deg, rgba(229, 9, 20, 0.1) 0%, rgba(26, 26, 26, 0.5) 100%);
+  box-shadow: 0 0 30px rgba(229, 9, 20, 0.2);
+  transform: scale(1.05);
+}
+.plan-badge { position: absolute; top: 20px; right: -30px; background: var(--accent-color); padding: 5px 40px; transform: rotate(45deg); font-weight: bold; font-size: 0.8rem; letter-spacing: 1px; }
+.plan-price { font-size: 3rem; font-family: var(--font-heading); color: var(--text-primary); margin: 1rem 0; }
+.plan-price span { font-size: 1rem; color: var(--text-secondary); }
+.plan-features { margin: 2rem 0; text-align: left; }
+.plan-features li { padding: 10px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; gap: 10px; }
+.plan-features li::before { content: '→'; color: var(--accent-color); font-weight: bold; }
+
+/* Gallery Masonry */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 1.5rem;
+}
+.gallery-item { border-radius: var(--radius-sm); overflow: hidden; position: relative; cursor: zoom-in; }
+.gallery-item.large { grid-row: span 2; grid-column: span 2; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.gallery-item:hover img { transform: scale(1.1); }
+.gallery-overlay {
+  position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  opacity: 0; transform: translateY(20px); transition: all 0.3s ease;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; transform: translateY(0); }
+
+/* Offer Countdown */
+.countdown-box { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
+.cd-item { background: var(--bg-color-lighter); padding: 1rem; border-radius: var(--radius-sm); min-width: 80px; text-align: center; border: 1px solid rgba(229, 9, 20, 0.3); }
+.cd-num { display: block; font-size: 2.5rem; font-family: var(--font-heading); color: var(--accent-color); }
+.cd-label { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-secondary); }
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .plan-card.popular { transform: scale(1); }
+  .page-hero { height: 50vh; }
+}

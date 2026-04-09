@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Marcus Kane",
+    "specialty": "Hypertrophy & Powerlifting",
+    "image": "assets/images/trainers/trainer_1.png",
+    "social": {
+      "instagram": "#",
+      "twitter": "#"
+    }
+  }
+]

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Programs | IronEdge Gym</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="custom-cursor"></div>
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="page-hero-bg parallax-img" style="background-image: url('assets/images/gallery/workout_model.png');"></div>
+            <div class="page-hero-overlay"></div>
+            <div class="container page-hero-content">
+                <h1 class="reveal-text"><div class="word">Our</div> <div class="word">Fitness</div> <div class="word text-accent">Programs</div></h1>
+                <p>Action-driven pathways guaranteed to push you across your limits.</p>
+            </div>
+        </section>
+
+        <!-- Programs List -->
+        <section class="section">
+            <div class="container">
+                <div class="cards-grid">
+                    <!-- Program 1 -->
+                    <div class="card glass">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/gallery/workout_model.png" alt="Weight Training" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Weight <span class="text-accent">Training</span></h3>
+                            <p class="card-text">Free weights and machines designed to build pure muscle mass and explosive power.</p>
+                            <button class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 1rem;" onclick="window.openModal()">Join Now</button>
+                        </div>
+                    </div>
+                    <!-- Program 2 -->
+                    <div class="card glass">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/hero/hero_bg.png" alt="Cardio Training" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Cardio <span class="text-accent">Training</span></h3>
+                            <p class="card-text">High-octane treadmill, rowing, and cycling routines for unmatched stamina.</p>
+                            <button class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 1rem;" onclick="window.openModal()">Join Now</button>
+                        </div>
+                    </div>
+                    <!-- Program 3 -->
+                    <div class="card glass">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/trainers/trainer_coach.png" alt="Personal Training" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Personal <span class="text-accent">Training</span></h3>
+                            <p class="card-text">1-on-1 elite coaching focusing solely on your tailored biomechanics and goals.</p>
+                            <button class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 1rem;" onclick="window.openModal()">Join Now</button>
+                        </div>
+                    </div>
+                    <!-- Program 4 -->
+                    <div class="card glass">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/gallery/workout_model.png" alt="CrossFit" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">CrossFit / <span class="text-accent">Functional</span></h3>
+                            <p class="card-text">Intense functional movements performed at high intensity to prepare you for real life.</p>
+                            <button class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 1rem;" onclick="window.openModal()">Join Now</button>
+                        </div>
+                    </div>
+                    <!-- Program 5 -->
+                    <div class="card glass">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/transformations/transformation_model.png" alt="Fat Loss" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Fat Loss <span class="text-accent">Program</span></h3>
+                            <p class="card-text">Strategic caloric burn combined with HIIT to shred fat extremely fast.</p>
+                            <button class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 1rem;" onclick="window.openModal()">Join Now</button>
+                        </div>
+                    </div>
+                    <!-- Program 6 -->
+                    <div class="card glass">
+                        <div class="card-img-wrapper">
+                            <img src="assets/images/hero/hero_bg.png" alt="Muscle Gain" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Muscle Gain <span class="text-accent">Program</span></h3>
+                            <p class="card-text">Heavy compound lifting and caloric surplus tracking to maximize mass.</p>
+                            <button class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 1rem;" onclick="window.openModal()">Join Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlight Custom Plans -->
+        <section class="section cta-section" style="background-image: url('assets/images/hero/hero_bg.png');">
+            <div class="cta-overlay glass">
+                <h2>Custom Plans <span class="text-accent">Available</span></h2>
+                <p>Not sure where to begin? Our master coaches will audit your body composition and create a hyper-personalized plan.</p>
+                <button class="btn btn-primary interactive-element" onclick="window.openModal()">Get Free Consultation</button>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <div id="modal-placeholder"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.32/dist/lenis.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
