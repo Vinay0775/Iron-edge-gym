@@ -57,4 +57,14 @@ function initSlider() {
         sliderHandle.style.left = `${position}%`;
         imageBeforeWrapper.style.width = `${position}%`;
     }
+
+    // Fix image-before width for responsive containers
+    const imageBefore = document.querySelector('.image-before');
+    function resizeImage() {
+        if (imageBefore && sliderContainer) {
+            imageBefore.style.width = `${sliderContainer.offsetWidth}px`;
+        }
+    }
+    window.addEventListener('resize', resizeImage);
+    resizeImage(); // Initialize
 }

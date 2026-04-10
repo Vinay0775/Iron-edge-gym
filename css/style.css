@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,7 +8,8 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: initial; /* Lenis handles this */
+  scroll-behavior: initial;
+  /* Lenis handles this */
 }
 
 body {
@@ -18,7 +21,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   text-transform: uppercase;
   font-weight: 700;
@@ -27,9 +35,17 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
 }
 
-h1 { font-size: clamp(3rem, 8vw, 6rem); }
-h2 { font-size: clamp(2.5rem, 5vw, 4rem); }
-h3 { font-size: clamp(2rem, 4vw, 3rem); }
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
 
 a {
   color: inherit;
@@ -45,12 +61,15 @@ ul {
   list-style: none;
 }
 
-img, video {
+img,
+video {
   max-width: 100%;
   display: block;
 }
 
-.text-center { text-align: center; }
+.text-center {
+  text-align: center;
+}
 
 .container {
   max-width: 1400px;
@@ -124,12 +143,15 @@ img, video {
 /* --- HERO SECTION --- */
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 85vh;
+  min-height: 75vh;
   display: flex;
-  align-items: flex-end; /* Locks it securely at bottom */
-  padding-bottom: 8rem;
+  align-items: center;
+  /* Centered instead of flex-end */
+  justify-content: flex-start;
   overflow: hidden;
-  padding-top: 100px;
+  padding-top: 180px;
+  /* Account for navbar */
 }
 
 .hero-bg {
@@ -154,7 +176,7 @@ img, video {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(5,5,5,0.9) 0%, rgba(5,5,5,0.4) 100%);
+  background: linear-gradient(to right, rgba(5, 5, 5, 0.9) 0%, rgba(5, 5, 5, 0.4) 100%);
 }
 
 .hero-content {
@@ -230,14 +252,16 @@ img, video {
   transition: color 0.3s;
 }
 
-.tab-btn:hover, .tab-btn.active {
+.tab-btn:hover,
+.tab-btn.active {
   color: var(--text-primary);
 }
 
 .tab-btn.active::after {
   content: '';
   position: absolute;
-  bottom: -18px; /* Cover the border bottom */
+  bottom: -18px;
+  /* Cover the border bottom */
   left: 0;
   width: 100%;
   height: 4px;
@@ -287,7 +311,8 @@ img, video {
 
 .parallax-img {
   width: 100%;
-  height: 140%; /* Taller for parallax room */
+  height: 140%;
+  /* Taller for parallax room */
   object-fit: cover;
 }
 
@@ -322,13 +347,15 @@ img, video {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%; /* Initial state */
+  width: 50%;
+  /* Initial state */
   height: 100%;
   overflow: hidden;
 }
 
 .image-before {
-  width: 1000px; /* Should match container width to prevent stretching, but we use object-fit */
+  width: 1000px;
+  /* Should match container width to prevent stretching, but we use object-fit */
   height: 100%;
   object-fit: cover;
   object-position: left;
@@ -359,16 +386,18 @@ img, video {
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   pointer-events: auto;
 }
 
 /* --- CTA SECTION --- */
 .cta-section {
-  background-image: url('assets/images/trainers/trainer_1.png'); /* Dynamic fallback */
+  background-image: url('assets/images/trainers/trainer_1.png');
+  /* Dynamic fallback */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Parallax effect */
+  background-attachment: fixed;
+  /* Parallax effect */
   text-align: center;
 }
 
@@ -386,7 +415,8 @@ img, video {
 }
 
 /* Lenis Recommended */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 

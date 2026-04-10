@@ -105,6 +105,22 @@ function playHeroAnimations() {
             delay: 0.2
         });
     }
+
+    // Smoothly load other hero content
+    const otherElements = document.querySelectorAll('.hero-subtext, .hero-actions, .page-hero-content p');
+    if (otherElements.length > 0) {
+        gsap.fromTo(otherElements,
+            { y: 30, opacity: 0 },
+            {
+                y: 0,
+                opacity: 1,
+                duration: 1,
+                stagger: 0.2,
+                ease: 'power4.out',
+                delay: 0.8
+            }
+        );
+    }
 }
 
 function initScrollTriggers() {
